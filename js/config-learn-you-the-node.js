@@ -10,7 +10,10 @@ var quizJSON = {
     },
     "questions": [
         {
-            "q": "console.log('nodebp')",
+            "r": {
+              "app.js": ["console.log('nodebp')"].join('<br/>')
+            },
+            "q": "node app.js",
             "a": [
                 {"option": "nodebp",      "correct": true},
                 {"option": "string",     "correct": false},
@@ -20,14 +23,15 @@ var quizJSON = {
             "incorrect": "<p><span>Uhh no.</span>The correct one is: 'nodebp'</p>" // no comma here
         },
         {
-          "q": ["//app.js:",
-                "var result = 0;",
-                "for (var i = 2; i < process.argv.length; i++){",
-                "   result += process.argv[i]",
-                "}",
-                "console.log(result)",
-                "//terminal:",
-                "node app.js 1 2 3"].join('<br/>'),
+          "r": {
+            "app.js": ["//app.js:",
+              "var result = 0;",
+              "for (var i = 2; i < process.argv.length; i++){",
+              "   result += process.argv[i]",
+              "}",
+              "console.log(result)"].join('<br/>')
+          },
+          "q": ["node app.js 1 2 3"].join('<br/>'),
           "a": [
             {"option": undefined,      "correct": false},
             {"option": "0123",     "correct": true},
@@ -38,15 +42,15 @@ var quizJSON = {
           "incorrect": "<p><span>Uhh no.</span>The correct one is: '0123', because the arguments will be processed as strings.</p>" // no comma here
         },
         {
-          "q": ["//app.js:",
-            "var fs = require('fs');",
-            "var val = fs.readFileSync('data.csv', 'utf8').split('\\n').length - 1",
-            "console.log(val)",
-            "//data.csv:",
-            "node is fun",
-            "much win",
-            "//terminal:",
-            "node app.js"].join('<br/>'),
+          "r": {
+            "app.js": ["var fs = require('fs');",
+              "var val = fs.readFileSync('data.csv', 'utf8').split('\\n').length - 1",
+              "console.log(val)"].join('<br/>'),
+            "data.csv": ["node is fun",
+              "much win",
+              " "].join('<br/>')
+          },
+          "q": ["node app.js"].join('<br/>'),
           "a": [
             {"option": "node is fun",      "correct": false},
             {"option": "much win",     "correct": false},

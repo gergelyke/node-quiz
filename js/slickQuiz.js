@@ -157,10 +157,23 @@
                 // Loop through questions object
                 for (i in questions) {
                     if (questions.hasOwnProperty(i)) {
+                        var j;
                         var question = questions[i];
 
                         var questionHTML = $('<li class="' + questionClass +'" id="question' + (count - 1) + '"></li>');
+
                         questionHTML.append('<div class="' + questionCountClass + '"><h3>Question <span class="current">' + count + '</span> of <span class="total">' + questionCount + '</span></h3></div>');
+
+                        // add resources
+                        for (j in question.r) {
+                          if(question.r.hasOwnProperty(j)){
+                            questionHTML.append('<h5>' + j +'</h5>');
+                            questionHTML.append('<pre><code>' + question.r[j] + '</pre></code>');
+                          }
+                        }
+
+                        // add question
+                        questionHTML.append('<h5>terminal</h5>');
                         questionHTML.append('<pre><code>' + question.q + '</pre></code>');
 
                         // Count the number of true values
