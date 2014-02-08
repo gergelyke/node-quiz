@@ -312,10 +312,13 @@
             // Validates the response selection(s), displays explanations & next question button
             checkAnswer: function(checkButton) {
                 var questionLI    = $($(checkButton).parents(_question)[0]),
+                    $progressbarSuccess = $('.progress-bar-success'),
+                    $progressbarFail = $('.progress-bar-danger'),
                     answerInputs  = questionLI.find('input:checked'),
                     questionIndex = parseInt(questionLI.attr('id').replace(/(question)/, ''), 10),
                     answers       = questions[questionIndex].a,
-                    selectAny     = questions[questionIndex].select_any ? questions[questionIndex].select_any : false;
+                    selectAny     = questions[questionIndex].select_any ? questions[questionIndex].select_any : false,
+                    percentage = Math.floor($('.progress').width() / questions.length);
 
                 // Collect the true answers needed for a correct response
                 var trueAnswers = [];
@@ -349,6 +352,9 @@
 
                 if (correctResponse) {
                     questionLI.addClass(correctClass);
+                    $progressbarSuccess.css({width: "+=" + percentage + "px"});
+                } else {
+                    $progressbarFail.css({width: "+=" + percentage + "px"});
                 }
 
                 // Toggle appropriate response (either for display now and / or on completion)
