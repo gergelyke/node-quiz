@@ -3,11 +3,9 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
 
-    <title>Node.js bitches</title>
+    <title>nodeschool quiz</title>
 
-    <link href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="css/highlight.css" media="screen" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -24,76 +22,34 @@
             </button>
             <a class="navbar-brand" href="/">node-quiz</a>
         </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="https://twitter.com/nthgergo">created by @nthgergo</a></li>
-            </ul>
-        </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="quizName"><!-- where the quiz name goes --></h1>
-
-            <div class="quizArea">
-                <div class="quizHeader">
-                    <!-- where the quiz main copy goes -->
-
-                    <button class="btn btn-success button startQuiz" href="#">Get Started!</button>
-                </div>
-
-                <!-- where the quiz gets built -->
+            <div class="alert alert-success">So you just finished a
+                <a href="http://nodeschool.io">Nodeschool</a> lesson? Let's see
+                if you remember!
             </div>
-
-            <div class="quizResults">
-                <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>
-                <hr/>
-                <p>
-                    Wow, you did great! Keep up, and
-                    <a href="http://nodeschool.io/">Learn You The Node.js For Much Win!</a>
-                </p>
-                <hr/>
-                <p>It is time for the world to know how awesome you were, let's share it with your friends! :)</p>
-                <a href="#" id="tweet-share" class="btn btn-primary btn-large">
-                    Share on Twitter
-                </a>
-                <hr/>
-
-                <h3 class="quizLevel"><strong></strong> <span><!-- where the quiz ranking level goes --></span>
-                </h3>
-
-                <div class="quizResultsCopy">
-                    <!-- where the quiz result copy goes -->
-                </div>
-            </div>
-
+            <h4>Available quizzes</h4>
+            <ul>
+                <li><a href="learn_you_the_node.html"> Learn You The Node.js For Much Win!</a></li>
+            </ul>
+            <h4>Coming soon</h4>
+            <ul>
+                <li>Stream Adventure</li>
+                <li>Bytewiser</li>
+                <li>Functional Javascript</li>
+                <li>Git-it</li>
+                <li><strong>and so on...(please fork, and send a PR!)<strong></li>
+            </ul>
         </div>
     </div>
 </div>
 <script src="js/jquery.js"></script>
-<script src="js/slickQuiz-config.js"></script>
-<script src="js/slickQuiz.js"></script>
-<script src="js/master.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/highlight.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script>
-    function generateTweet(options) {
-        var $btn = $('#tweet-share'),
-            count = options.count,
-            score = options.score,
-            url = 'https://twitter.com/share?url=';
 
-        url += encodeURIComponent('http://gergelyke.github.io/node-quiz');
-        url += '&text='
-        url += encodeURIComponent('I just scored ' + score + ' from ' + count + ' on node-quiz!' +
-                ' Are you up to the challenge?');
-
-        $btn.attr('href', url);
-    }
-</script>
 <a href="https://github.com/gergelyke/node-quiz"><img style="position: absolute; top: 0; right: 0; border: 0;"
                                       src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
                                       alt="Fork me on GitHub"></a>

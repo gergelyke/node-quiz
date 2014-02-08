@@ -121,7 +121,7 @@
 
         plugin.config = $.extend(defaults, options);
 
-        // Set via json option or quizJSON variable (see slickQuiz-config.js)
+        // Set via json option or quizJSON variable (see slickQuiz-config-learn-you-the-node.js)
         var quizValues = (plugin.config.json ? plugin.config.json : typeof quizJSON != 'undefined' ? quizJSON : null);
 
         // Get questions, possibly sorted randomly
