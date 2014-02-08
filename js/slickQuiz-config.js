@@ -10,27 +10,20 @@ var quizJSON = {
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "What number is the letter A in the English alphabet?",
+            "q": "var a = [false]; <br/>" +
+              "if ([false]) {  <br/>" +
+              "  console.log(a == true);  <br/>" +
+              "} else {  <br/>" +
+              "  console.log('wut');  <br/>" +
+              "}",
             "a": [
-                {"option": "8",      "correct": false},
-                {"option": "14",     "correct": false},
-                {"option": "1",      "correct": true},
-                {"option": "23",     "correct": false} // no comma here
+                {"option": "true",      "correct": false},
+                {"option": "false",     "correct": true},
+                {"option": "'wut'",      "correct": false},
+                {"option": "other",     "correct": false} // no comma here
             ],
-            "correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
-            "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
-        },
-        { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "Which of the following best represents your preferred breakfast?",
-            "a": [
-                {"option": "Bacon and eggs",               "correct": false},
-                {"option": "Fruit, oatmeal, and yogurt",   "correct": true},
-                {"option": "Leftover pizza",               "correct": false},
-                {"option": "Eggs, fruit, toast, and milk", "correct": true} // no comma here
-            ],
-            "select_any": true,
-            "correct": "<p><span>Nice!</span> Your cholestoral level is probably doing alright.</p>",
-            "incorrect": "<p><span>Hmmm.</span> You might want to reconsider your options.</p>" // no comma here
+            "correct": "<p><span>That's right!</span>[false] as a boolean is considered true. Alas, when using it in the comparisons it gets converted in a different way and all goes to hell.</p>",
+            "incorrect": "<p><span>Uhh no.</span>[false] as a boolean is considered true. Alas, when using it in the comparisons it gets converted in a different way and all goes to hell.</p>" // no comma here
         }
     ]
 };
