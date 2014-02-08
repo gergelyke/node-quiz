@@ -5,7 +5,7 @@
 var quizJSON = {
     "info": {
         "name":    "Node.js basics - a.k.a. node.js, bitches!",
-        "main":    "",
+        "main":    "<h5>What will be the output of the following snippets?</h5>",
         "results": ""
     },
     "questions": [
