@@ -55,7 +55,7 @@ var quizJSON = {
         {"option": "node is fun", "correct": false},
         {"option": "much win", "correct": false},
         {"option": 2, "correct": true},
-        {"option": "other", "correct": false}
+        {"option": 3, "correct": false}
       ],
       "correct": "<p><span>That's right!</span></p>",
       "incorrect": "<p><span>Uhh no.</span> It just splits the text on every new line, then get the length of this array.</p>" // no comma here
