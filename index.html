@@ -9,7 +9,6 @@
     <link href="css/bootstrap.css" media="screen" rel="stylesheet" type="text/css">
     <link href="css/highlight.css" media="screen" rel="stylesheet" type="text/css">
 
-
 </head>
 
 <body id="slickQuiz">
@@ -51,6 +50,15 @@
             <div class="quizResults">
                 <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>
 
+                <p>
+                    Wow, you did great! Keep up, and
+                    <a href="http://nodeschool.io/">Learn You The Node.js For Much Win!</a>
+                </p>
+                <hr/>
+                <a href="#" id="tweet-share" class="btn btn-success btn-large">
+                    Share on twitter
+                </a>
+
                 <h3 class="quizLevel"><strong></strong> <span><!-- where the quiz ranking level goes --></span>
                 </h3>
 
@@ -69,8 +77,24 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/highlight.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<script>
+    function generateTweet(options) {
+        var $btn = $('#tweet-share'),
+            count = options.count,
+            score = options.score,
+            url = 'https://twitter.com/share?url=';
 
+        url += encodeURIComponent('http://gergelyke.github.io/node-quiz');
+        url += '&text='
+        url += encodeURIComponent('I just scored ' + score + ' from ' + count + ' on node-quiz!' +
+                'Are you up to the challenge?');
+
+        $btn.attr('href', url);
+    }
+</script>
+<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;"
+                                      src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+                                      alt="Fork me on GitHub"></a>
 
 </body>
 </html>

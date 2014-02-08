@@ -443,6 +443,10 @@
                         $quizResults.fadeIn(500);
                     }
                 });
+                generateTweet({
+                  count: questionCount,
+                  score: score
+                });
             },
 
             // Compares selected responses with true answers, returns true if they match exactly
