@@ -14,12 +14,12 @@ var quizJSON = {
               "if ([false]) {  <br/>" +
               "  console.log(a == true);  <br/>" +
               "} else {  <br/>" +
-              "  console.log('wut');  <br/>" +
+              "  console.log('js');  <br/>" +
               "}",
             "a": [
                 {"option": "true",      "correct": false},
                 {"option": "false",     "correct": true},
-                {"option": "'wut'",      "correct": false},
+                {"option": "'js'",      "correct": false},
                 {"option": "other",     "correct": false} // no comma here
             ],
             "correct": "<p><span>That's right!</span>[false] as a boolean is considered true. Alas, when using it in the comparisons it gets converted in a different way and all goes to hell.</p>",
