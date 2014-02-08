@@ -4,8 +4,9 @@
 
 var quizJSON = {
     "info": {
-        "name":    "Node-quiz - the tricky parts",
-        "main":    "<h5>What will be the output of the following snippets?</h5>",
+        "name":    "Node-quiz - Learn You The Node.js For Much Win",
+        "main":    "<h3>Have you done nodeschool? Check what you have learnt.</h3>" +
+          "<h5>What will be the output of the following snippets?</h5>",
         "results": ""
     },
     "questions": [
