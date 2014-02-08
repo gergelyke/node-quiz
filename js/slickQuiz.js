@@ -160,8 +160,8 @@
                         var question = questions[i];
 
                         var questionHTML = $('<li class="' + questionClass +'" id="question' + (count - 1) + '"></li>');
-                        questionHTML.append('<div class="' + questionCountClass + '">Question <span class="current">' + count + '</span> of <span class="total">' + questionCount + '</span></div>');
-                        questionHTML.append('<h3>' + count + '. ' + question.q + '</h3>');
+                        questionHTML.append('<div class="' + questionCountClass + '"><h3>Question <span class="current">' + count + '</span> of <span class="total">' + questionCount + '</span></h3></div>');
+                        questionHTML.append('<pre><code>' + question.q + '</pre></code>');
 
                         // Count the number of true values
                         var truths = 0;

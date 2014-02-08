@@ -1,0 +1,20 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/gergelyke/.nvm/v0.10.25/bin/node',
+1 verbose cli   '/Users/gergelyke/.nvm/v0.10.25/bin/npm',
+1 verbose cli   'start',
+1 verbose cli   'node-restify' ]
+2 info using npm@1.3.24
+3 info using node@v0.10.25
+4 error Error: ENOENT, open '/Users/gergelyke/Documents/node_modules/node-restify/package.json'
+5 error If you need help, you may report this *entire* log,
+5 error including the npm and node versions, at:
+5 error     <http://github.com/isaacs/npm/issues>
+6 error System Darwin 13.0.2
+7 error command "/Users/gergelyke/.nvm/v0.10.25/bin/node" "/Users/gergelyke/.nvm/v0.10.25/bin/npm" "start" "node-restify"
+8 error cwd /Users/gergelyke/Documents/Dev/SlickQuiz
+9 error node -v v0.10.25
+10 error npm -v 1.3.24
+11 error path /Users/gergelyke/Documents/node_modules/node-restify/package.json
+12 error code ENOENT
+13 error errno 34
+14 verbose exit [ 34, true ]
