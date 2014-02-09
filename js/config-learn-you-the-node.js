@@ -62,7 +62,7 @@ var quizJSON = {
     },
     {
       "r": {
-        "app.js": ["var dep = require('dep');",
+        "app.js": ["var dep = require('./dep');",
           "console.log(dep(3))"].join('<br/>'),
         "dep.js": ["module.exports = function (val) {",
           "  return val * 2;",
@@ -85,7 +85,7 @@ var quizJSON = {
           "  response.setEncoding('utf8')",
           "  response.on('data', console.log)",
           "  response.on('error', console.error)",
-          "}"
+          "})"
         ].join('<br/>')
       },
       "q": ["node app.js"].join('<br/>'),
