@@ -102,43 +102,42 @@ var quizJSON = {
       "r": {
         "server.js": [
           "var http = require('http');",
+          "var app = require('./app');",
+          "var port = 10000+Math.random()*10000|0;",
           "http.createServer(function (req, res) {",
           "  res.write(req.url.substring(1));",
           "  res.end();",
-          "}).listen(3000)"
+          "}).listen(port, app);"
         ].join('<br/>'),
         "app.js": [
           "var http = require('http');",
           "var bl = require('bl');",
           "var results = [];",
           "var count = 0;",
-          "function printResults () {",
+          "var port = 0;",
+          "module.exports = function(){",
+          "  port = this.address().port;",
           "  for (var i = 0; i < 3; i++)",
-          "    console.log(results[i])",
-          "}",
+          "    httpGet(i)",
+          "};",
           "function httpGet (index) {",
-          "  http.get('http://localhost:3000/'+ index, function (response) {",
+          "  http.get('http://localhost:'+port+'/'+ index, function (response) {",
           "    response.pipe(bl(function (err, data) {",
           "      if (err)",
           "        return console.error(data)",
-
           "      results[index] = data.toString()",
           "      count++",
-
           "      if (count == 3) // yay! we are the last one!",
-          "        printResults()",
+          "        console.log(results)",
           "    }))",
           "  })",
-          "}",
-
-          "for (var i = 0; i < 3; i++)",
-          "  httpGet(i)"
+          "}"
         ].join('<br/>')
       },
-      "q": ["node app.js"].join('<br/>'),
+      "q": ["node server.js"].join('<br/>'),
       "a": [
         {"option": "[2, 1, 0]", "correct": false},
-        {"option": "[0, 1, 2]", "correct": true},
+        {"option": "['0', '1', '2']", "correct": true},
         {"option": "1", "correct": false},
         {"option": "[0, 1, NaN]", "correct": false}
       ],
