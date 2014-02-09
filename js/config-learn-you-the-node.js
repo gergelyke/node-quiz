@@ -85,7 +85,7 @@ var quizJSON = {
           "  response.setEncoding('utf8')",
           "  response.on('data', console.log)",
           "  response.on('error', console.error)",
-          "}"
+          "})"
         ].join('<br/>')
       },
       "q": ["node app.js"].join('<br/>'),
