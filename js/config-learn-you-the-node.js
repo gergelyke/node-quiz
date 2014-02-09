@@ -135,10 +135,10 @@ var quizJSON = {
           "  httpGet(i)"
         ].join('<br/>')
       },
-      "q": ["node app.js"].join('<br/>'),
+      "q": ["node server.js & node app.js"].join('<br/>'),
       "a": [
         {"option": "[2, 1, 0]", "correct": false},
-        {"option": "[0, 1, 2]", "correct": true},
+        {"option": "0 1 2", "correct": true},
         {"option": "1", "correct": false},
         {"option": "[0, 1, NaN]", "correct": false}
       ],
