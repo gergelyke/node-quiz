@@ -11,16 +11,19 @@ var quizJSON = {
   "questions": [
     {
       "r": {
-        "app.js": ["console.log('nodebp')"].join('<br/>')
+        "app.js": ["var result = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {",
+                   "  return a.concat(b.reverse());",
+                   "});",
+                  "console.log(result);"].join('<br/>')
       },
       "q": "node app.js",
       "a": [
-        {"option": "nodebp", "correct": true},
-        {"option": "string", "correct": false},
-        {"option": "undefined", "correct": false}
+        {"option": "[0, 1, 3, 2, 5, 4]", "correct": false},
+        {"option": "[1, 0, 3, 2, 5, 4]", "correct": true},
+        {"option": "[0, 1, 3, 2, 4, 5]", "correct": false}
       ],
       "correct": "<p><span>That's right!</span></p>",
-      "incorrect": "<p><span>Uhh no.</span>The correct one is: 'nodebp'</p>"
+      "incorrect": "<p><span>Uhh no.</span></p>"
     }
   ]
 };
