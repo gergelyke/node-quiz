@@ -111,7 +111,7 @@ var quizJSON = {
       "a": [
         {"option": "0", "correct": false},
         {"option": "undefined", "correct": false},
-        {"option": "3", "correct": false},
+        {"option": "3", "correct": true},
         {"option": "6", "correct": false}
       ],
       "correct": "<p><span>That's right!</span></p>",
