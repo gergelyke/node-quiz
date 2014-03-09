@@ -116,6 +116,48 @@ var quizJSON = {
       ],
       "correct": "<p><span>That's right!</span></p>",
       "incorrect": "<p><span>Uhh no.</span></p>"
+    },
+    {
+      "r": {
+        "app.js": ["function map(arr, fn) {",
+          "  return arr.reduce(function(acc, item, index, arr) {",
+          "    return acc.concat(fn(item-1, index, arr))",
+          "  }, [])",
+          "}",
+
+          "var o = map([1,3,5,7,11], function(val){",
+          "  return val;",
+          "});",
+
+          "console.log(o);"].join('<br/>')
+      },
+      "q": "node app.js",
+      "a": [
+        {"option": "NaN", "correct": false},
+        {"option": "[1, 3, 5, 7, 9]", "correct": false},
+        {"option": "[0, 2, 4, 6, 10]", "correct": true},
+        {"option": "27", "correct": false}
+      ],
+      "correct": "<p><span>That's right!</span></p>",
+      "incorrect": "<p><span>Uhh no.</span></p>"
+    },
+    {
+      "r": {
+        "app.js": ["var slice = Function.call.bind(Array.prototype.slice);",
+                   "function whoo() {",
+                   "  console.log(slice(arguments));",
+                   "}",
+                   "whoo('such', 'workshop')"].join('<br/>')
+      },
+      "q": "node app.js",
+      "a": [
+        {"option": "['such']", "correct": false},
+        {"option": "['workshop']", "correct": false},
+        {"option": "[undefined, undefined]", "correct": false},
+        {"option": "['such, 'workshop']", "correct": true}
+      ],
+      "correct": "<p><span>That's right!</span></p>",
+      "incorrect": "<p><span>Uhh no.</span></p>"
     }
   ]
 };
