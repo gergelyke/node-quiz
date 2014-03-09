@@ -12,9 +12,9 @@ var quizJSON = {
     {
       "r": {
         "app.js": ["var result = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {",
-                   "  return a.concat(b.reverse());",
-                   "});",
-                  "console.log(result);"].join('<br/>')
+          "  return a.concat(b.reverse());",
+          "});",
+          "console.log(result);"].join('<br/>')
       },
       "q": "node app.js",
       "a": [
@@ -37,7 +37,7 @@ var quizJSON = {
         {"option": "1", "correct": false},
         {"option": "[]", "correct": false},
         {"option": "6", "correct": true},
-        {"option": [1,2,3,4,5,6], "correct": false}
+        {"option": [1, 2, 3, 4, 5, 6], "correct": false}
       ],
       "correct": "<p><span>That's right!</span></p>",
       "incorrect": "<p><span>Uhh no.</span></p>"
@@ -45,17 +45,17 @@ var quizJSON = {
     {
       "r": {
         "app.js": ["function doge(wow) {",
-                    "  return function(very) {",
-                    "    return very.call(wow);",
-                    "  }",
-                    "}",
+          "  return function(very) {",
+          "    return very.call(wow);",
+          "  }",
+          "}",
 
-                    "var such = { x: 2 };",
-                    "such.much = doge({ x: 1});",
+          "var such = { x: 2 };",
+          "such.much = doge({ x: 1});",
 
-                    "console.log(such.much(function() {",
-                    "  return this.x;",
-                    "}))"].join('<br/>')
+          "console.log(such.much(function() {",
+          "  return this.x;",
+          "}))"].join('<br/>')
       },
       "q": "node app.js",
       "a": [
@@ -79,6 +79,40 @@ var quizJSON = {
         {"option": "[0,1,2,3]", "correct": true},
         {"option": "[3,2,1,0]", "correct": false},
         {"option": "[undefined, undefined, undefined, undefined]", "correct": false}
+      ],
+      "correct": "<p><span>That's right!</span></p>",
+      "incorrect": "<p><span>Uhh no.</span></p>"
+    },
+    {
+      "r": {
+        "app.js": ["var obj = {",
+          "  count: 0,",
+          "  doCount: function(){",
+          "    this.count++;",
+          "  }",
+          "};",
+
+          "var Spy = function(klass,method){",
+          "  var oldMethod = klass[method];",
+          "  var result = { count: 0 };",
+          "  klass[method] = function(){",
+          "    result.count++;",
+          "    return oldMethod.apply(this,arguments);",
+          "  };",
+          "  return result;",
+          "};",
+          "var spy = Spy(obj, 'doCount');",
+          "obj.doCount();",
+          "obj.doCount();",
+          "obj.doCount();,",
+          "console.log(obj.count)"].join('<br/>')
+      },
+      "q": "node app.js",
+      "a": [
+        {"option": "0", "correct": false},
+        {"option": "undefined", "correct": false},
+        {"option": "3", "correct": false},
+        {"option": "6", "correct": false}
       ],
       "correct": "<p><span>That's right!</span></p>",
       "incorrect": "<p><span>Uhh no.</span></p>"
