@@ -13,7 +13,7 @@ var quizJSON = {
       "r": {
         "app.js": ["var result = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {",
           "  return a.concat(b.reverse());",
-          "});",
+          "}, []);",
           "console.log(result);"].join('<br/>')
       },
       "q": "node app.js",
@@ -104,8 +104,8 @@ var quizJSON = {
           "var spy = Spy(obj, 'doCount');",
           "obj.doCount();",
           "obj.doCount();",
-          "obj.doCount();,",
-          "console.log(obj.count)"].join('<br/>')
+          "obj.doCount();",
+          "console.log(obj.count);"].join('<br/>')
       },
       "q": "node app.js",
       "a": [
