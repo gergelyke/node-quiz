@@ -104,8 +104,8 @@ var quizJSON = {
           "var spy = Spy(obj, 'doCount');",
           "obj.doCount();",
           "obj.doCount();",
-          "obj.doCount();,",
-          "console.log(obj.count)"].join('<br/>')
+          "obj.doCount();",
+          "console.log(obj.count);"].join('<br/>')
       },
       "q": "node app.js",
       "a": [
