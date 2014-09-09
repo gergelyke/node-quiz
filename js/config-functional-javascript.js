@@ -13,7 +13,7 @@ var quizJSON = {
       "r": {
         "app.js": ["var result = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {",
           "  return a.concat(b.reverse());",
-          "});",
+          "}, []);",
           "console.log(result);"].join('<br/>')
       },
       "q": "node app.js",
