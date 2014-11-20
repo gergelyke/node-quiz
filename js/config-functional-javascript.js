@@ -18,8 +18,8 @@ var quizJSON = {
       },
       "q": "node app.js",
       "a": [
-        {"option": "[0, 1, 3, 2, 5, 4]", "correct": false},
-        {"option": "[1, 0, 3, 2, 5, 4]", "correct": true},
+        {"option": "[0, 1, 3, 2, 5, 4]", "correct": true},
+        {"option": "[1, 0, 3, 2, 5, 4]", "correct": false},
         {"option": "[0, 1, 3, 2, 4, 5]", "correct": false}
       ],
       "correct": "<p><span>That's right!</span></p>",
